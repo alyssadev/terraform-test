@@ -11,6 +11,9 @@ variable "do_token" {}
 variable "domain" {}
 variable "pvt_key" {}
 variable "ssh_id" {}
+variable "html" {
+  default = "https://github.com/blha303/TextAdventure"
+}
 
 variable "region" {
   default = "sgp1"

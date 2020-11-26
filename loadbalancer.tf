@@ -1,6 +1,7 @@
 resource "digitalocean_loadbalancer" "www-lb" {
   name = "www-lb"
   region = var.region
+  redirect_http_to_https = true
 
   forwarding_rule {
     entry_port = 443
