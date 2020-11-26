@@ -10,7 +10,7 @@ terraform {
 variable "do_token" {}
 variable "domain" {}
 variable "pvt_key" {}
-variable "ssh_key" {}
+variable "ssh_id" {}
 
 variable "region" {
   default = "sgp1"
@@ -21,5 +21,5 @@ provider "digitalocean" {
 }
 
 data "digitalocean_ssh_key" "terraform" {
-  name = var.ssh_key
+  name = var.ssh_id
 }
