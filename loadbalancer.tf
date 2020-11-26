@@ -3,11 +3,12 @@ resource "digitalocean_loadbalancer" "www-lb" {
   region = var.region
 
   forwarding_rule {
-    entry_port = 80
-    entry_protocol = "http"
+    entry_port = 443
+    entry_protocol = "https"
 
-    target_port = 80
-    target_protocol = "http"
+    target_port = 443
+    target_protocol = "https"
+    certificate_id = digitalocean_certificate.lbcert.id
   }
 
   healthcheck {
